@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Girling, Ph.D. | Candidate for Head of GTM & Demand Generation</title>
+    <style>
+        :root {
+            --dca-blue: #0091ff;
+            --dca-dark-blue: #0066cc;
+            --dca-yellow: #f5b000;
+            --text-dark: #2d3142;
+            --text-light: #4f5d75;
+            --bg-light: #f8f9fa;
+            --border-color: #e6e8ec;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Top Header Navigation */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container img {
+            height: 45px;
+            display: block;
+        }
+
+        .header-title {
+            text-align: right;
+        }
+
+        .header-title h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .header-title p {
+            font-size: 0.9rem;
+            color: var(--dca-blue);
+            font-weight: 600;
+        }
+
+        /* Hero Banner Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #e6f4ff 100%);
+            padding: 60px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .hero-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 400;
+            border-left: 4px solid var(--dca-blue);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Main Grid Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Main Content Blocks */
+        .matrix-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .matrix-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .matrix-row {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .matrix-row:last-child {
+            border-bottom: none;
+        }
+
+        .req-side h4 {
+            color: var(--dca-dark-blue);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            background-color: #f0f4f8;
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .res-side ul {
+            list-style-type: none;
+        }
+
+        .res-side li {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .res-side li::before {
+            content: "•";
+            color: var(--dca-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Case Studies Styling */
+        .case-study-block {
+            background: #fafbfc;
+            border-left: 4px solid var(--dca-blue);
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .case-study-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        /* Sidebar Layout */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: sticky;
+            top: 110px;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .summary-list {
+            list-style: none;
+        }
+
+        .summary-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .summary-list li::before {
+            content: "✓";
+            color: var(--dca-blue);
+            font-weight: bold;
+        }
+
+        /* Buttons & Interactions */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--dca-blue);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dca-dark-blue);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+        }
+
+        /* Fixed Floating Widget */
+        .connect-widget {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid var(--border-color);
+            z-index: 1000;
+            max-width: 320px;
+        }
+
+        .connect-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .connect-info p {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .connect-info a {
+            font-size: 0.8rem;
+            color: var(--dca-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive Configuration */
+        @media (max-width: 900px) {
+            header { padding: 15px 20px; }
+            .hero-section { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .hero-tagline { border-left: none; padding-left: 0; }
+            .main-container { grid-template-columns: 1fr; padding: 0 20px; }
+            .matrix-row { grid-template-columns: 1fr; gap: 15px; }
+            .connect-widget { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="dca-logo.svg" alt="Doctor Care Anywhere Logo">
+        </div>
+        <div class="header-title">
+            <h1>Richard Girling, Ph.D.</h1>
+            <p>Application: Head of B2B GTM & Demand Generation</p>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <img src="richard-girling.jpg" alt="Richard Girling, Ph.D." class="hero-img">
+        <div class="hero-content">
+            <h2>Scalable B2B Pipelines & HealthTech Growth</h2>
+            <p class="hero-tagline">Exited Healthcare Founder with an Expert Lens on AI and Automation Sequences.</p>
+            <p style="color: var(--text-light); max-width: 700px;">
+                I am a HealthTech founder who built, optimized, and exited a healthcare marketing firm, scaling it to over 500+ clinics and organizations. Combining a deep, data-driven understanding of global business environments (Ph.D. in Global Entrepreneurship) with technical certification in Sequence Models and AI Strategy, I design high-velocity HubSpot architectures, account mapping models, and automated multichannel GTM funnels to turn complex corporate sales cycles into highly predictable revenue pipelines.
+            </p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        
+        <div class="left-column">
+            
+            <section class="matrix-card">
+                <h3>Meeting Your GTM & Pipeline Mandates</h3>
+                
+                <div class="matrix-row">
+                    <div class="req-side">
+                        <h4>1. Enterprise Channel Experimentation</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-light);">Proving lead gen channels, multi-channel automated outreach, broker sequences, and industry events.</p>
+                        <div class="badge-container">
+                            <span class="badge">Cold Outbound</span>
+                            <span class="badge">AI Automation</span>
+                        </div>
+                    </div>
+                    <div class="res-side">
+                        <ul>
+                            <li><strong>Proven 0-to-Scale Frameworks:</strong> Leveraged advanced data-driven acquisition models to scale Red Castle Services, executing thousands of automated sequences to break through to slow-moving medical buyers.</li>
+                            <li><strong>AI-Powered Lead Generation:</strong> Certified in DeepLearning.AI Sequence Models. Personally engineered automated outbound pathways that align text analytics and hyper-personalized positioning vectors to significantly increase meeting rates.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="matrix-row">
+                    <div class="req-side">
+                        <h4>2. Customer Discovery & Positioning</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-light);">Mapping buying committees (Insurers, SMEs, HR), Jobs-to-be-Done (JTBD) validation, and messaging refinement.</p>
+                        <div class="badge-container">
+                            <span class="badge">JTBD Discovery</span>
+                            <span class="badge">Committee Mapping</span>
+                        </div>
+                    </div>
+                    <div class="res-side">
+                        <ul>
+                            <li><strong>Advanced Structural Research:</strong> Academic foundation (Ph.D. from the University of Amsterdam) built on conducting 70+ deep-tier interviews across 20+ countries to map structural and environmental hurdles facing founders and businesses.</li>
+                            <li><strong>Commercial Medical Alignment:</strong> Built positioning toolkits that explicitly address the risk aversion, strict budget layers, and compliance needs of trust-dependent enterprise health executives.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="matrix-row">
+                    <div class="req-side">
+                        <h4>3. Hands-On Execution & CRM Ops</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-light);">HubSpot workflows, sales collateral creation, copy and content generation without relying on a large team footprint.</p>
+                        <div class="badge-container">
+                            <span class="badge">HubSpot CRM</span>
+                            <span class="badge">Collateral Design</span>
+                        </div>
+                    </div>
+                    <div class="res-side">
+                        <ul>
+                            <li><strong>Full-Stack Builder Mindset:</strong> Experienced in standing up and managing complete technical CRM pipelines, email sequencing logic, lead nurturing workflows, and pitch deck generation from day zero.</li>
+                            <li><strong>Content and Traffic Engineering:</strong> Directed digital transformations resulting in <strong>website traffic spikes over 500%</strong> through systematic SEO, automated value hooks, and razor-sharp content architecture.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="matrix-card">
+                <h3>Commercial Growth Case Studies</h3>
+                
+                <div class="case-study-block">
+                    <div class="case-study-title">Case Study 1: Healthcare Acquisition Engine — Red Castle Services</div>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 8px;">
+                        Founded, engineered, and managed the complete go-to-market and demand generation ecosystem for a healthcare-centric marketing firm.
+                    </p>
+                    <ul>
+                        <li><strong>Scalable Moat-Based Acquisition:</strong> Structured automated cold outbound campaigns, multi-channel drip logic, and strategic referral frameworks that scaled the firm's portfolio to <strong>over 500+ active medical practices and organizations</strong>.</li>
+                        <li><strong>Commercial Realization:</strong> Acted as the sole executive owner of the conversion funnel, sales asset production, and service monetization loops, successfully leading the firm to a <strong>7-figure exit</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-block">
+                    <div class="case-study-title">Case Study 2: Infrastructure & Funnel Design — Migration Policy Group</div>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 8px;">
+                        As Head of Communications, completely audited and rebuilt the operational digital funnel and internal/external content generation systems.
+                    </p>
+                    <ul>
+                        <li><strong>Audience Scalability:</strong> Modernized digital discovery funnels to expand network reach, generating a <strong>300% surge in web pipeline traffic</strong> and a **5x growth rate** in social channels.</li>
+                        <li><strong>Regulated Data Integrity:</strong> Restructured the underlying data storage and user routing parameters to achieve absolute compliance with strict GDPR guidelines.</li>
+                    </ul>
+                </div>
+            </section>
+            
+        </div>
+
+        <aside class="sidebar">
+            
+            <div class="sidebar-widget">
+                <h4>GTM Highlights</h4>
+                <ul class="summary-list">
+                    <li>Exited HealthTech Founder (7-Figure Scale)</li>
+                    <li>Ph.D. in Global Entrepreneurship (UvA)</li>
+                    <li>Sequence Models & AI Certified</li>
+                    <li>HubSpot Workflows & Lead Gen Architect</li>
+                    <li>B2B Healthcare Sector Domain Expert</li>
+                    <li>UK Citizen</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4>Verification Links</h4>
+                <a href="https://scholar.google.com/citations?user=93YGWNwAAAAJ&hl=en" target="_blank" class="btn btn-secondary">View Research & Data Publications</a>
+                <a href="mailto:richard.girling83@gmail.com?subject=GTM%20and%20Demand%20Generation%20Discussion" class="btn btn-primary">Schedule a Pipeline Discussion</a>
+            </div>
+
+            <blockquote style="font-style: italic; color: var(--text-light); font-size: 0.9rem; border-left: 3px solid var(--dca-yellow); padding-left: 10px;">
+                "Enterprise HealthTech buyers care about evidence, compliance, and undeniable ROI models. Because I have personally sat in the founder's seat scaling pipelines to over 500 medical organizations, I construct sequences that mirror how healthcare decision-makers actually buy."
+            </blockquote>
+            
+        </aside>
+        
+    </main>
+
+    <div class="connect-widget">
+        <img src="richard-girling.jpg" alt="Richard Profile" class="connect-thumb">
+        <div class="connect-info">
+            <p>Ready to build your pipeline.</p>
+            <a href="#" target="_blank">Connect via LinkedIn →</a>
+        </div>
+    </div>
+
+</body>
+</html>
