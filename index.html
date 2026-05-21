@@ -198,6 +198,40 @@
             font-size: 1.05rem;
         }
 
+        /* Education & Certs Styling */
+        .edu-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .edu-item:last-child {
+            border-bottom: none;
+        }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        .edu-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+        .edu-meta {
+            font-size: 0.9rem;
+            color: var(--dca-blue);
+            font-weight: 600;
+        }
+        .edu-dates {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .edu-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
         /* Sidebar Layout */
         .sidebar {
             display: flex;
@@ -322,6 +356,8 @@
             .main-container { grid-template-columns: 1fr; padding: 0 20px; }
             .matrix-row { grid-template-columns: 1fr; gap: 15px; }
             .connect-widget { display: none; }
+            .edu-header { flex-direction: column; }
+            .edu-dates { margin-top: 2px; }
         }
     </style>
 </head>
@@ -430,6 +466,66 @@
                         <li><strong>Audience Scalability:</strong> Modernized digital discovery funnels to expand network reach, generating a <strong>300% surge in web pipeline traffic</strong> and a <strong>5x growth rate</strong> in social channels.</li>
                         <li><strong>Regulated Data Integrity:</strong> Restructured the underlying data storage and user routing parameters to achieve absolute compliance with strict GDPR guidelines.</li>
                     </ul>
+                </div>
+            </section>
+
+            <section class="matrix-card">
+                <h3>Education & Technical Training</h3>
+                
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <div>
+                            <div class="edu-title">University of Amsterdam</div>
+                            <div class="edu-meta">PhD, Entrepreneurship / Entrepreneurial Studies</div>
+                        </div>
+                        <div class="edu-dates">2017 – 2021</div>
+                    </div>
+                    <div class="edu-desc">
+                        Research provides a data-driven framework for evaluating social capital and scalability in diverse founder ecosystems—directly applicable to Impact Investing due diligence.
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <div>
+                            <div class="edu-title">University of Wrocław</div>
+                            <div class="edu-meta">Master's Degree in International Relations</div>
+                        </div>
+                        <div class="edu-dates">2014 – 2016</div>
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <div>
+                            <div class="edu-title">Durham University</div>
+                            <div class="edu-meta">BA, German and Linguistics (1st Class Honors)</div>
+                        </div>
+                        <div class="edu-dates">2002 – 2006</div>
+                    </div>
+                    <div class="edu-desc">
+                        <strong>Activities and Societies:</strong> Captain of Hild Bede Men's Hockey Club, Foster Child Mentor Scheme.
+                    </div>
+                </div>
+
+                <div class="edu-item" style="margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--bg-light);">
+                    <div class="edu-title" style="font-size: 1.2rem; margin-bottom: 15px;">Technical Certifications (DeepLearning.AI)</div>
+                    
+                    <div class="edu-header" style="margin-bottom: 12px;">
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-dark);">Sequence Models</div>
+                            <div style="font-size: 0.85rem; color: var(--dca-dark-blue); font-weight: 600; text-transform: uppercase; margin-top: 2px;">Machine Learning and Deep Learning</div>
+                        </div>
+                        <div class="edu-dates">Issued Feb 2026</div>
+                    </div>
+
+                    <div class="edu-header">
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-dark);">Structuring Machine Learning Projects</div>
+                            <div style="font-size: 0.85rem; color: var(--dca-dark-blue); font-weight: 600; text-transform: uppercase; margin-top: 2px;">Machine Learning and AI Strategy</div>
+                        </div>
+                        <div class="edu-dates">Issued Feb 2026</div>
+                    </div>
                 </div>
             </section>
             
